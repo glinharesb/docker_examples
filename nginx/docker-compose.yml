@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  web:
+    image: nginx:alpine
+    container_name: nginx
+    restart: always
+    ports:
+      - 8080:80
+    volumes:
+      - ./cache/nginx/html:/usr/share/nginx/html
